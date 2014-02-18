@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "MVC and Me"
+date:   2011-09-23 20:29:30
+---
+
+During my attempt to build my first Ruby on Rails app, I've discovered just how painfully ignorant I am about how the MVC architecture works. At first glance (and after finishing <a title="Rails for Zombies" href="http://railsforzombies.org/">Rails for Zombies</a>), I felt I had a solid understanding. I suppose I'm used to the way simple HTML or PHP files function and this layer of complexity that comes with MVC melts my brain.
+
+How I thought I understood it:
+<ul>
+  <li>Model = Database</li>
+  <li>View = HTML (not a perfect analogy, of course, but similar in that it only displays things)</li>
+  <li>Controller = business logic!</li>
+</ul>
+Since I'm familiar with PHP, I decided I would try to see how <a title="Zend" href="http://www.zend.com/">Zend</a> works, since it too uses the MVC architecture. I quickly realized my proto-app was nearly identical to the way my first RoR app looked. So Zend wasn't the best option for me to try to understand this.
+
+And so I began Googling and ran across some great reading material (links @ the bottom of this post) that helped me to further shape my understanding.
+
+How I now understand it:
+<ul>
+  <li>Model = Middleman between the database and the app and the location of business logic (not the controller, as I had thought)</li>
+  <li>View = HTML (I think I was actually right!)</li>
+  <li>Controller = The "glue" between Models and Views, and the traffic controller (no business logic here!)</li>
+</ul>
+<div>Now if I could only figure out why I can't get this thing to talk to my local MySQL database...</div>
+
+Ruby on Rails Beginners' MVC Links:
+
+<ul>
+  <li><a href="http://guides.rubyonrails.org/getting_started.html">Getting Started with Rails</a> (Always a good place to look for help)</li>
+  <li><a href="http://www.slideshare.net/codeinmotion/mvc-demystified-essence-of-ruby-on-rails">MVC Demystified: Essence of Ruby on Rails</a> (PPT to walk you through MVC on RoR)</li>
+  <li><a href="http://fuelyourcoding.com/creating-your-first-ruby-on-rails-application-from-scratch/">Creating Your First Ruby on Rails Application From Scratch</a> (I liked the diagram here)</li>
+</ul>

@@ -1,0 +1,23 @@
+---
+layout: post
+title:  "Chiditarod 2013"
+date:   2013-03-11 13:29:57
+---
+
+Over the last few months, I've had the opportunity to work on an application to support the 2013 <a href="http://www.chiditarod.org">Chiditarod</a>, "<em>...Chicago's Epic Urban Iditarod. A charity food drive, beauty pageant, costumed shopping cart race, talent show, fundraiser and chaos generator all in one</em>." Basically, it's a really awesome (and fun) way to raise money and food for local food banks and I'm happy that I could be a part of it!
+
+During the race, teams move from checkpoint to checkpoint in a specific order, waiting 25 minutes at each. ChiScore, our name for the timing software, needed to keep track of teams' checkin times as well as locking a team from checking in at two different checkpoints at once.
+
+A few 8th Lighters built the original ChiScore two years ago, so this wasn't the first time the application was built and we knew a lot of the risks going into building it this year. The first two iterations ran into some availability issues on race day, so we set out to redesign the software and address those issues from the start. I'd never built an application geared toward high-traffic and high-availability, so this was a really exciting problem to work on.
+
+Our focus on speed reflected in the stack choices we made: we decided to use Sinatra as our server, Redis as our data store and JSON to serve up data through AJAX requests. The result was an incredibly fast and scalable application that the organization can use in the future!
+
+We knew from the start that Rails was overkill for this project, so the decision to use Sinatra was an easy one. Given Sinatra's lightweight nature, adding our custom modules for communication with Redis and user authentication were trivial.
+
+Database workers were to blame for the previous year's availability trouble, so an in-memory data store looked like a great option for this application. We quickly decided on Redis, as it gave us the features (including "locking" teams with a <a href="http://redis.io/commands/ttl">TTL</a>) and speed we were looking for. I was initially concerned that we'd lose data if the server crashed and dumped everything on our Redis server, but Brian set it up such that it <a href="http://redis.io/topics/persistence">wrote to disk every few seconds</a>, avoiding data loss. Overall, I was impressed. I'll absolutely use it in future applications and I'd encourage you to do so as well if you have similar needs!
+
+Users needed to be able to see how long a team had been checked into a checkpoint, so AJAX requests and data rendering on the page via jQuery and some home-brewed CoffeeScript were a great fit. We kept our server's load as light as possible, since requests consisted of very small JSON responses and the client was responsible for template rendering.
+
+Needless to say, race day came and went without a hitch. Our longest response time was 100ms and we had no system slowdown at any point. In fact, the EC2 server instance size we used last year was complete overkill this year. <a href="http://www.chiditarod.org/2013/03/chiditarod-2013-results/">Victory</a>!
+
+If you're interested in participating or volunteering next year, visit the <a href="http://www.chiditarod.org/">Chiditarod website</a> for more information!
