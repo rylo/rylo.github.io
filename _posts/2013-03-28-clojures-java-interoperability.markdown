@@ -6,28 +6,28 @@ date:   2013-03-28 16:44:50
 
 As part of my residency here at <a href="http://www.8thlight.com/">8th Light</a>, I was tasked with connecting my <a href="http://github.com/rylo/t3-clojure">Clojure tic-tac-toe library</a> to my <a href="http://github.com/rylo/Homestake">Java HTTP server</a>. I had to learn how to use Clojure's Java interoperability features before I could work on this project--here's a bit of what I learned:
 
-<h2>Instantiating Classes</h2>
+## Instantiating Classes
 
 Initializing a new instance of a Java class is dead simple. Consider initializing a new String, for example, in Java:
 
-<pre><code>String myName = new String("Rylan");</code></pre>
+    String myName = new String("Rylan");
 
 Let's try the same exact thing in Clojure:
 
-<pre><code>(java.lang.String. "Rylan")
-=> "Rylan"</code></pre>
+    (java.lang.String. "Rylan")
+    => "Rylan"
 
 See? That wasn't so hard. The key thing to notice is the period after <code>java.lang.String</code>. This period tells the compiler to create a new instance of the class of whatever was before it; in this case, <code>java.lang.String</code>. You could do the same thing with Java's Integer class:
 
-<pre><code>(java.lang.Integer. 1337)
-=> 1337</code></pre>
+    (java.lang.Integer. 1337)
+    => 1337
 
-<h2>Calling Methods</h2>
+## Calling Methods
 
 Let's say we want to use some of <a href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html#method_detail">Java's String functions</a>. This, too, is quite simple:
 
-<pre><code>(.(java.lang.String. "Rylan") length)
-=> 5</code></pre>
+    (.(java.lang.String. "Rylan") length)
+    => 5
 
 Notice the period before we instantiate my name as a String; <a href="http://clojure.org/java_interop#Java Interop-The Dot special form">this tells Clojure</a> to treat this statement as Java code and run a Java method named <code>length</code> on the String instance provided.
 
@@ -36,33 +36,33 @@ We can even call multiple methods on an instance of a Java class by using Clojur
 <pre><code>(doto (java.util.ArrayList.) (.add "Candy") (.add "Cookies")(.add "Ice Cream"))
 => ["Candy" "Cookies" "Ice Cream"]</code></pre>
 
-<h2>Accessing Fields</h2>
+## Accessing Fields
 
 The syntax for getting a Java field is similar to calling methods. Let's imagine we have a very simple Sushi class with a field containing the type of fish in the roll:
 
-<pre><code>class Sushi {
-  public String fishType;
-  
-  public Sushi(String fishType) {
-    this.fishType = fishType;
-  }
-}</code></pre>
+    class Sushi {
+      public String fishType;
+      
+      public Sushi(String fishType) {
+        this.fishType = fishType;
+      }
+    }
 
 Now let's access the <code>fishType</code> field from Clojure:
 
-<pre><code>(. (Sushi. "Tuna") fishType)
-=> "Tuna"</code></pre>
+    (. (Sushi. "Tuna") fishType)
+    => "Tuna"
 
 The first period (within the parentheses) again tells us to evaluate this bit of code as Java, then we provide an instance of the Sushi class and finally provide the field name we're looking for.
 
-<h2>Creating New Classes</h2>
+## Creating New Classes
 
 Creating new Java classes in Clojure is, however, a bit more involved. To start, we'll need to create a new namespace for our class and then give it a class name and a method prefix by using the <code>:gen-class</code> namespace clause:
 
-<pre><code>(ns examples.sushi
-  (:gen-class
-    :name examples.Sushi
-    :prefix method-))</code></pre>
+    (ns examples.sushi
+      (:gen-class
+        :name examples.Sushi
+        :prefix method-))
 
 <code>:name</code> simply sets a name for the class that we'll use when we want to construct a new object, in this case, we've set it to examples.Sushi:
 
