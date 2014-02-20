@@ -10,17 +10,12 @@
     <link rel="stylesheet" href="/css/syntax.css">
 
     <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/grid.css">
     <link rel="stylesheet" href="/css/main.css">
   </head>
   <body>
-
-    <div class="container">
-      <div class="header"></div>
-
-      {{ content }}
-
-      <div class="footer"></div>
-    </div>
-
+    <header>{% include navigation.html %}</header>
+    <div class="container">{{ content }}</div>
+    <footer>{% include footer.html %}</footer>
   </body>
 </html>
