@@ -1,9 +1,53 @@
 body {
+  background-color: #fff;
+  color: #555;
   margin: 0;
 }
 
+h1 {
+  font-weight: 900;
+  margin: 0;
+}
+
+.post-title {
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+a h2 {
+  color: #444;
+  margin-bottom: 0;
+}
+
+a {
+  color: #497bad;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+pre {
+  background-color: #f8f8f8;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  overflow-x: scroll;
+  padding: 1.2rem;
+}
+
 header {
-  background: #efefef;
+  background-color: #efefef;
   margin-bottom: 3rem;
 }
 
@@ -19,11 +63,22 @@ header {
 }
 
 .navigation li a {
-  color: #888;
+  color: #fff;
   text-decoration: none;
 }
 
+/* Profile Page */
+
+.profile-photo {
+  width: 50%;
+}
+
 /* Blog */
+
+.post-date {
+  color: #999;
+  font-size: 0.9rem;
+}
 
 .post-list {
   list-style: none;

@@ -7,11 +7,11 @@ date:   2011-09-23 20:29:30
 During my attempt to build my first Ruby on Rails app, I've discovered just how painfully ignorant I am about how the MVC architecture works. At first glance (and after finishing <a title="Rails for Zombies" href="http://railsforzombies.org/">Rails for Zombies</a>), I felt I had a solid understanding. I suppose I'm used to the way simple HTML or PHP files function and this layer of complexity that comes with MVC melts my brain.
 
 How I thought I understood it:
-<ul>
-  <li>Model = Database</li>
-  <li>View = HTML (not a perfect analogy, of course, but similar in that it only displays things)</li>
-  <li>Controller = business logic!</li>
-</ul>
+
+-   Model = Database
+-   View = HTML (not a perfect analogy, of course, but similar in that it only displays things)
+-   Controller = business logic!
+
 Since I'm familiar with PHP, I decided I would try to see how <a title="Zend" href="http://www.zend.com/">Zend</a> works, since it too uses the MVC architecture. I quickly realized my proto-app was nearly identical to the way my first RoR app looked. So Zend wasn't the best option for me to try to understand this.
 
 And so I began Googling and ran across some great reading material (links @ the bottom of this post) that helped me to further shape my understanding.
