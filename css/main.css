@@ -60,9 +60,9 @@ header {
 
 .site-logo {
   color: #fff;
+  float: left;
   font-family: "Righteous", Arial;
   font-size: 2em;
-  left: 0;
 }
 
 .navigation {
