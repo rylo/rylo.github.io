@@ -41,6 +41,7 @@ p {
   margin-top: 0;
 }
 
+
 pre {
   background-color: #f8f8f8;
   -moz-border-radius: 3px;
@@ -55,6 +56,7 @@ pre {
 }
 
 header {
+  background-color: #687685;
   margin-bottom: 3rem;
 }
 
