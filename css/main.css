@@ -58,10 +58,17 @@ header {
   margin-bottom: 3rem;
 }
 
+.site-logo {
+  color: #fff;
+  font-family: "Righteous", Arial;
+  font-size: 2em;
+  left: 0;
+}
+
 .navigation {
+  float: right;
   line-height: 3rem;
   list-style: none;
-  width: 100%;
 }
 
 .navigation li {
