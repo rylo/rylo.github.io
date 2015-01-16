@@ -5,12 +5,11 @@ body {
 }
 
 h1 {
-  font-weight: 900;
+  color: #444;
+  font-family: "Raleway";
+  font-size: 1.7em;
+  font-weight: 700;
   margin: 0;
-}
-
-.post-header {
-  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -41,7 +40,6 @@ p {
   margin-top: 0;
 }
 
-
 pre {
   background-color: #f8f8f8;
   -moz-border-radius: 3px;
@@ -56,31 +54,50 @@ pre {
 }
 
 header {
-  background-color: #687685;
-  margin-bottom: 3rem;
+  background-color: #fff;
+  color: #152C55;
+  height: 3.7em;
 }
 
 .site-logo {
-  color: #fff;
+  color: #444;
   float: left;
   font-family: "Righteous", Arial;
   font-size: 2em;
+  line-height: 1.8em;
 }
 
 .navigation {
   float: right;
-  line-height: 3rem;
+  font-size: .8em;
+  line-height: 4.5em;
   list-style: none;
 }
 
 .navigation li {
   float: right;
   margin-right: 1rem;
+  padding: 0 1em 0 1em;
+}
+
+.navigation li:hover {
+  background-color: #f8f8f8;
 }
 
 .navigation li a {
-  color: #fff;
+  color: #2d4571;
   text-decoration: none;
+}
+
+.hero {
+  height: 400px;
+  background: url('/images/stars.jpg');
+  background-position: 0px -2418px, center;
+  display: block;
+}
+
+.home {
+  margin-top: 3em;
 }
 
 /* Profile Page */
@@ -95,9 +112,17 @@ header {
 
 /* Blog */
 
+.post {
+  margin-top: 2em;
+}
+
+.post-header {
+  margin-bottom: 1.5em;
+}
+
 .post-date {
   color: #999;
-  font-size: 0.9rem;
+  font-size: 0.7em;
 }
 
 .post-list {
@@ -109,10 +134,28 @@ header {
   margin-bottom: 1rem;
 }
 
-.github-logo {
-  width: 3rem;
+.read-more-posts {
+  display: block;
+}
+
+.read-more-posts:hover {
+  background: #f8f8f8;
+}
+
+/* Footer */
+
+.external-logos {
+  width: 13em;
+  margin: 0 auto;
+}
+
+.external-logo {
+  display: inline-block;
+  margin: 0 .5em;
+  width: 2.5em;
 }
 
 footer {
-  margin-top: 3rem;
+  margin-top: 3em;
+  padding-bottom: 2em;
 }
