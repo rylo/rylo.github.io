@@ -90,8 +90,10 @@ header {
   text-decoration: none;
 }
 
+/* Hero */
+
 .hero {
-  height: 400px;
+  height: 350px;
   background: url('/images/stars.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -99,6 +101,32 @@ header {
   background-size: cover;
   display: block;
 }
+
+.quote {
+  max-width: 27em;
+  position: relative;
+  text-shadow: 0 3px 7px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hero-quote {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 1.5em;
+}
+
+.hero-quote-author {
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 1.9px;
+  margin-top: .5em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+/* Home Page */
 
 .home {
   margin-top: 3em;

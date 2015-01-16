@@ -3,7 +3,13 @@ layout: default
 title: Rylan Dirksen
 ---
 
-<div class="hero"></div>
+<div class="hero">
+  <div class="container quote">
+    <div class="hero-quote" data-id="quote"></div>
+    <div class="hero-quote-author" data-id="quote-author"></div>
+  </div>
+</div>
+
 <div class="container">
   <div class="home">
     <h1 class="post-header">Recent Blog Posts</h1>
@@ -22,3 +28,14 @@ title: Rylan Dirksen
     </div>
   </div>
 </div>
+
+<script type="text/javascript" src="/javascript/quoteGenerator.js" ></script>
+<script>
+  $(document).ready(function() {
+    quoteGenerator = new QuoteGenerator();
+    quote = quoteGenerator.random();
+
+    $('[data-id="quote"]').html('"' + quote[0] + '"');
+    $('[data-id="quote-author"]').html('- ' + quote[1]);
+  });
+</script>
