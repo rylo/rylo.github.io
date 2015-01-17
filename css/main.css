@@ -59,6 +59,10 @@ header {
   height: 3.7em;
 }
 
+a.site-logo {
+  text-decoration: none;
+}
+
 .site-logo {
   color: #444;
   float: left;
@@ -128,7 +132,7 @@ header {
 
 /* Home Page */
 
-.home {
+.profile-page, .home {
   margin-top: 3em;
 }
 
