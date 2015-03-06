@@ -136,16 +136,6 @@ a.site-logo {
   margin-top: 3em;
 }
 
-/* Profile Page */
-
-.profile-photo {
-  width: 50%;
-}
-
-.profile-page p {
-  text-align: center;
-}
-
 /* Blog */
 
 .post {
@@ -178,7 +168,7 @@ a.site-logo {
 /* Footer */
 
 .external-logos {
-  width: 11em;
+  width: 12em;
   margin: 0 auto;
 }
 
