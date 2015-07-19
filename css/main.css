@@ -178,8 +178,7 @@ a.site-logo {
 /* Footer */
 
 .external-logos {
-  width: 11em;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .external-logo {
