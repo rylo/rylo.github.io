@@ -55,50 +55,59 @@ pre {
 
 header {
   background-color: #fff;
-  color: #152C55;
-  height: 3.7em;
 }
 
 a.site-logo {
   text-decoration: none;
 }
 
+.navigation-wrapper {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .site-logo {
-  color: #444;
-  float: left;
-  font-family: "Righteous", Arial;
-  font-size: 2em;
-  line-height: 1.8em;
+  justify-content: left;
+  background-image: url('/images/logo2.svg');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 70px;
 }
 
 .navigation {
-  float: right;
-  font-size: .8em;
-  line-height: 4.5em;
-  list-style: none;
+  display: flex;
 }
 
-.navigation li {
-  float: right;
-  margin-right: 1rem;
+.navigation-item {
+  display: flex;
+  margin-right: .5rem;
 }
 
-.navigation li:hover {
-  background-color: #f8f8f8;
-}
-
-.navigation li a {
-  color: #444;
-  display: inline-block;
-  padding: 0 1em 0 1em;
+.navigation-item a {
+  display: flex;
   text-decoration: none;
+  color: #4a4a4a;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: .7rem;
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+}
+
+.navigation-item:hover {
+  background-color: #f8f8f8;
 }
 
 /* Hero */
 
 .hero {
   height: 350px;
-  background: url('/images/stars.jpg') no-repeat center center;
+  background: linear-gradient(#B3E1F8, #fff);
+  background-size:auto 30px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -107,24 +116,22 @@ a.site-logo {
 }
 
 .quote {
-  max-width: 27em;
+  width: 50%;
+  color: #4a4a4a;
   position: relative;
-  text-shadow: 0 3px 7px rgba(0, 0, 0, 0.8);
   top: 50%;
   transform: translateY(-50%);
 }
 
 .hero-quote {
-  color: #fff;
   margin: 0 auto;
-  font-size: 1.5em;
+  font-size: 1.2rem;
 }
 
 .hero-quote-author {
-  color: #fff;
-  font-size: 0.9em;
+  font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 1.9px;
+  letter-spacing: .1rem;
   margin-top: .5em;
   text-align: right;
   text-transform: uppercase;
