@@ -4,26 +4,8 @@ title: Rylan Dirksen
 ---
 
 <div class="hero">
-  <div class="container quote">
-    <div class="hero-quote" data-id="quote"></div>
-    <div class="hero-quote-author" data-id="quote-author"></div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="home">
-    <ul class="post-list">
-      {% for post in site.posts limit:5 %}
-      <li>
-      <h2 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-      </li>
-      {% endfor %}
-    </ul>
-
-    <div>
-      <a href="/blog" class="read-more-posts">Read more &#8594;</a>
-    </div>
+  <div class="container">
+    <p class="short-bio">Hi, I'm Rylan Dirksen.<br />I'm a polyglot developer based in Chicago.</p>
   </div>
 </div>
 

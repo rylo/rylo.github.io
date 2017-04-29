@@ -102,55 +102,29 @@ a.site-logo {
   background-color: #f8f8f8;
 }
 
-/* Hero */
-
-.hero {
-  height: 350px;
-  background: linear-gradient(#B3E1F8, #fff);
-  background-size:auto 30px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  display: block;
-}
-
-.quote {
-  width: 50%;
-  color: #4a4a4a;
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.hero-quote {
-  margin: 0 auto;
-  font-size: 1.2rem;
-}
-
-.hero-quote-author {
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: .1rem;
-  margin-top: .5em;
-  text-align: right;
-  text-transform: uppercase;
-}
-
 /* Home Page */
 
-.profile-page, .home {
+.profile-page,
+.home {
   margin-top: 3em;
 }
 
-/* Profile Page */
-
-.profile-photo {
-  width: 50%;
+.hero {
+  background: #57B7E6;
+  padding: 4rem;
 }
 
-.profile-page p {
-  text-align: center;
+h1.hero-text,
+.hero-text {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  font-size: 2rem;
+}
+
+.short-bio {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
 }
 
 /* Blog */
@@ -184,14 +158,20 @@ a.site-logo {
 
 /* Footer */
 
-.external-logos {
-  text-align: center;
+.contact-links {
+  display: flex;
+  justify-content: center;
 }
 
-.external-logo {
-  display: inline-block;
-  margin: 0 .5em;
-  width: 2.5em;
+.contact-link,
+a.contact-link {
+  color: #4a4a4a;
+  font-size: .8rem;
+  margin-right: 2rem;
+}
+
+a.contact-link:hover {
+  text-decoration: underline;
 }
 
 footer {
