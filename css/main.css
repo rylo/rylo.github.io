@@ -114,7 +114,7 @@ a.site-logo {
 }
 
 .hero {
-  background: #57B7E6;
+  background: linear-gradient(#57B7E6, #57B7E6 70%, #B3E1F8);
   padding: 4rem;
 }
 
@@ -122,6 +122,48 @@ a.site-logo {
   color: #fff;
   font-size: 2rem;
   font-weight: 800;
+}
+
+.skills {
+  margin-top: 3rem;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-flow: row wrap;
+}
+
+.skill {
+  margin-right: 4rem;
+  color: #fff;
+  text-align: center;
+}
+
+.skill-icon {
+  height: 5rem;
+  width: 5rem;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.skill-icon--ruby {
+  background-image: url('/images/ruby-icon.png');\
+}
+
+.skill-icon--js {
+  background-size: 80%;
+  background-image: url('/images/js-icon.png');\
+}
+
+.skill-icon--java {
+  background-image: url('/images/java-icon.png');\
+}
+
+.skill-icon--sql {
+  background-size: 70%;
+  background-image: url('/images/sql-icon.png');\
 }
 
 /* Blog */
@@ -165,6 +207,10 @@ a.contact-link {
   color: #4a4a4a;
   font-size: .8rem;
   margin-right: 2rem;
+}
+
+.contact-link:last-child {
+  margin-right: 0;
 }
 
 a.contact-link:hover {
