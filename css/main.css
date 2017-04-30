@@ -6,14 +6,13 @@ body {
 
 h1 {
   color: #444;
-  font-family: "Raleway";
-  font-size: 1.7em;
+  font-size: 2em;
   font-weight: 700;
   margin: 0;
 }
 
 h2 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -55,6 +54,7 @@ pre {
 
 header {
   background-color: #fff;
+  border-bottom: 1px solid #dedede;
 }
 
 a.site-logo {
@@ -102,6 +102,10 @@ a.site-logo {
   background-color: #f8f8f8;
 }
 
+.section-title {
+  margin-bottom: 3rem;
+}
+
 /* Home Page */
 
 .profile-page,
@@ -112,13 +116,6 @@ a.site-logo {
 .hero {
   background: #57B7E6;
   padding: 4rem;
-}
-
-h1.hero-text,
-.hero-text {
-  color: #fff;
-  font-family: 'Lato', sans-serif;
-  font-size: 2rem;
 }
 
 .short-bio {
