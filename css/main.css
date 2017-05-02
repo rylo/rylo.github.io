@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -114,13 +114,16 @@ a.site-logo {
 }
 
 .hero {
-  background-color: #57b7e6;
+  background-color: #e8e8e8;
   padding: 4rem;
 }
 
 .short-bio {
-  color: #fff;
-  font-size: 2rem;
+  color: #4a4a4a;
+  font-size: 1.6rem;
+}
+
+.short-bio-name {
   font-weight: 800;
 }
 
@@ -136,7 +139,6 @@ a.site-logo {
 
 .skill {
   margin-right: 4rem;
-  color: #fff;
   text-align: center;
 }
 
