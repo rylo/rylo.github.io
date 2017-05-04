@@ -42,7 +42,7 @@ Notice the period before we instantiate my name as a String; <a href="http://clo
 We can even call multiple methods on an instance of a Java class by using Clojure's <a href="http://clojuredocs.org/clojure_core/clojure.core/doto"><code>doto</code> function</a>:
 
 {% highlight clojure %}
-(doto (java.util.ArrayList.) 
+(doto (java.util.ArrayList.)
   (.add "Candy")
   (.add "Cookies")
   (.add "Ice Cream"))

@@ -212,7 +212,6 @@ img {
   display: block;
   height: auto;
   margin: 0 auto 1.5rem auto;
-  width: 100%;
 }
 
 .rwd {
@@ -230,16 +229,6 @@ img {
 
 .example p { color: rgba(255,255,255,0.7); }
 .example img { margin: 0; }
-
-.fragmentation {
-  background-image: url("/images/grid/fragmentation.png");
-  background-size: cover;
-  min-height: 250px;
-}
-
-@media (min-width: 40rem) {
-  .fragmentation { min-height: 500px; }
-}
 
 .mobile-first .column {
   float: none;
