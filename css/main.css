@@ -197,6 +197,26 @@ a.site-logo {
   margin-top: 1.4em;
 }
 
+
+/* Projects */
+
+.sort-wrapper {
+  height: 15rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sort-column {
+  flex: 1;
+  margin-left: 1rem;
+  background-color: orange;
+}
+
+.sort-column__altered {
+  background: red;
+}
+
+
 /* Footer */
 
 .contact-links {

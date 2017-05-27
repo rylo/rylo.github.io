@@ -1,0 +1,26 @@
+---
+layout: default
+title: Rylan Dirksen - Projects
+---
+
+<div class="container">
+  <div class="home">
+    <h1 class="section-title">Projects</h1>
+
+    <h2>Bubble Sort</h2>
+    <div id="bubble_sort_display--play">Play</div>
+    <div id="bubble_sort_display" class="sort-wrapper"></div>
+
+    <h2>Bubble Sort</h2>
+    <div id="bubble_sort_display" class="sort-wrapper"></div>
+  </div>
+</div>
+
+<script src="/javascript/bubbleSort.js"></script>
+<script src="/javascript/sortDisplay.js"></script>
+
+<script>
+  var display = new SortDisplay('#bubble_sort_display');
+  var sorter = new BubbleSort(display, [100, 5, 48, 9, 70, 90, 30, 70]);
+  sorter.initialize('#bubble_sort_display--play');
+</script>
