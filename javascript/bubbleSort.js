@@ -39,7 +39,3 @@ BubbleSort.prototype.sortStep = async function(numbers) {
 
   return sortedNumbers;
 }
-
-function sleep(duration) {
-  return new Promise(resolve => setTimeout(resolve, duration));
-}

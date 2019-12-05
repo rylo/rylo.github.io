@@ -40,9 +40,12 @@ Independently developed by Colin Fidge and Friedemann Mattern in 1988, vector cl
 
 Remember that the synchronization events include the sender's vector clock. By comparing these clocks, the algorithm can better determine the causal order of events. The comparison runs through each element in the vector clocks and then applies a few simple rules:
 
-- If all of the timestamps for event X are less than or equal to all of event Y’s timestamps, then X came before Y and the events were not concurrent: ![Vector clock example](/images/posts/synchronization-4.png)
-- If all of the timestamps for event X are greater than or equal to all of event Y’s, then Y came before X and the events were not concurrent: ![Vector clock example](/images/posts/synchronization-5.png)
-- If some of X’s timestamps come both before and after some of Y’s, however, then the writes are considered concurrent and we can’t discern the order: ![Vector clock example](/images/posts/synchronization-6.png)
+- If all of the timestamps for event X are less than or equal to all of event Y’s timestamps, then X came before Y and the events were not concurrent:  
+![Vector clock example](/images/posts/synchronization-4.png)
+- If all of the timestamps for event X are greater than or equal to all of event Y’s, then Y came before X and the events were not concurrent:  
+![Vector clock example](/images/posts/synchronization-5.png)
+- If some of X’s timestamps come both before and after some of Y’s, however, then the writes are considered concurrent and we can’t discern the order:  
+![Vector clock example](/images/posts/synchronization-6.png)
 
 With these rules in mind, let's take a look at the previous Lamport timestamp example, this time using vector clocks:
 

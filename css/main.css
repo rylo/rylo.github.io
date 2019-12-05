@@ -1,42 +1,80 @@
+html, body {
+  overflow: auto;
+}
+
 body {
-  background-color: #fff;
-  color: #555;
+  align-items: center;
+  /* background-color: #333; */
+  background-color: #232323;
+  color: #c3c3c3;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Raleway', sans-serif;
   margin: 0;
+  min-height: calc(100vh);
+}
+
+.rainbow {
+  background-image: linear-gradient( 135deg, #EEAD92 10%, #6018DC 100%);
 }
 
 h1 {
-  color: #444;
-  font-size: 2em;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
   font-weight: 700;
-  margin: 4rem 0 0 0;
+  line-height: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
 }
 
 h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.post-title {
-  margin-bottom: 0;
-}
-
-h2 a {
-  color: #444;
-  margin-bottom: 0;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin: 20px 0 10px 0;
 }
 
 a {
-  color: #497bad;
+  color: #c33eb3;
   text-decoration: none;
 }
 
 a:hover {
+  color: #d3d3d3;
   text-decoration: none;
 }
 
+article {
+  font-size: 21px;
+  line-height: 1.58;
+}
+
+@media only screen and (max-width: 600px) {
+  article {
+    padding: 0 14px;
+  }
+}
+
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 40px;
   margin-top: 0;
+}
+
+code {
+  font-family: monospace;
+}
+
+.highlighter-rouge {
+  margin-bottom: 40px;
+}
+
+figure {
+  margin-bottom: 40px;
 }
 
 pre {
@@ -47,7 +85,7 @@ pre {
   border: 1px solid #ddd;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  max-width: 100%;
   overflow-x: scroll;
   padding: 1.2rem;
 }
@@ -55,6 +93,19 @@ pre {
 header {
   background-color: #fff;
   border-bottom: 1px solid #dedede;
+  width: 100%;
+}
+
+.container {
+  max-width: 700px;
+  padding-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding-top: 60px;
+  }
 }
 
 a.site-logo {
@@ -65,24 +116,30 @@ a.site-logo {
   height: 70px;
   display: flex;
   justify-content: space-between;
+  padding-right: 20px;
+  align-items: center;
+  padding-left: 20px;
 }
 
 .site-logo {
   justify-content: left;
-  background-image: url('/images/logo2.svg');
+  background-image: url('/images/r_logo.png');
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
   width: 70px;
+  height: 70px;
 }
 
 .navigation {
+  font-family: 'Lato';
   display: flex;
+  height: 70px;
 }
 
 .navigation-item {
   display: flex;
-  margin-right: .5rem;
+  margin-right: 10px;
 }
 
 .navigation-item a {
@@ -93,7 +150,7 @@ a.site-logo {
   flex-direction: column;
   text-align: center;
   padding: 0 1rem;
-  font-size: .7rem;
+  font-size: 13px;
   letter-spacing: .1rem;
   text-transform: uppercase;
 }
@@ -103,7 +160,7 @@ a.site-logo {
 }
 
 .section-title {
-  margin-bottom: 3rem;
+  margin-bottom: 90px;
 }
 
 /* Home Page */
@@ -170,8 +227,19 @@ a.site-logo {
 
 /* Blog */
 
+.post-title a {
+  color: #fff;
+  padding-bottom: 10px;
+}
+
 .post {
-  margin-top: 2em;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .post {
+    margin: 0;
+  }
 }
 
 .post-header {
@@ -180,7 +248,7 @@ a.site-logo {
 
 .post-date {
   color: #999;
-  font-size: 0.7em;
+  font-size: 15px;
 }
 
 .post-list {
@@ -189,7 +257,7 @@ a.site-logo {
 }
 
 .post-list li {
-  margin-bottom: 1rem;
+  margin-bottom: 50px;
 }
 
 .read-more-posts {
@@ -220,13 +288,13 @@ a.site-logo {
 /* Footer */
 
 .contact-links {
+  color: #fff;
   display: flex;
   justify-content: center;
 }
 
-.contact-link,
-a.contact-link {
-  color: #4a4a4a;
+.contact-link {
+  color: #fff;
   font-size: .8rem;
   margin-right: 2rem;
 }
@@ -242,4 +310,20 @@ a.contact-link:hover {
 footer {
   margin-top: 3em;
   padding-bottom: 2em;
+}
+
+.front-page__container {
+  color: #fff;
+  padding: 15% 10%;
+}
+
+.front-page__name {
+  font-family: 'Playfair Display', serif;
+  font-size: 70px;
+}
+
+.front-page__short-description {
+  padding-top: 20px;
+  font-weight: 200;
+  font-size: 25px;
 }

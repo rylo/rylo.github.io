@@ -4,16 +4,14 @@ title: Rylan Dirksen - Blog Posts
 ---
 
 <div class="container">
-  <div class="home">
-    <h1 class="section-title">Blog Posts</h1>
+  <h1 class="section-title">Blog Posts</h1>
 
-    <ul class="post-list">
-      {% for post in site.posts %}
-      <li>
-      <h2 class='post-title'><a href="{{ post.url }}">{{ post.title }}</a></h2>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+    </li>
+    {% endfor %}
+  </ul>
 </div>

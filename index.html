@@ -1,28 +1,9 @@
 ---
-layout: default
+layout: rainbow
 title: Rylan Dirksen
 ---
 
-<div class="hero">
-  <div class="container">
-    <p class="short-bio">Hi, I'm <span class="short-bio-name">Rylan Dirksen</span>.<br />I'm a polyglot developer based in Chicago.</p>
-    <p class="short-bio">I tend to work in:</p>
-    <ul class="skills">
-      <li class="skill"><div class="skill-icon skill-icon--ruby"></div>Ruby</li>
-      <li class="skill"><div class="skill-icon skill-icon--js"></div>Javascript</li>
-      <li class="skill"><div class="skill-icon skill-icon--java"></div>Java</li>
-      <li class="skill"><div class="skill-icon skill-icon--sql"></div>SQL</li>
-    </ul>
-  </div>
+<div class="front-page__container">
+  <div class="front-page__name">Rylan Dirksen</div>
+  <p class="front-page__short-description">Chicago-based polyglot developer.</p>
 </div>
-
-<script type="text/javascript" src="/javascript/quoteGenerator.js" ></script>
-<script>
-  $(document).ready(function() {
-    quoteGenerator = new QuoteGenerator();
-    quote = quoteGenerator.random();
-
-    $('[data-id="quote"]').html('"' + quote[0] + '"');
-    $('[data-id="quote-author"]').html('- ' + quote[1]);
-  });
-</script>
