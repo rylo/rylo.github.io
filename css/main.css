@@ -4,7 +4,7 @@ html, body {
 
 body {
   align-items: center;
-  background-color: #232323;
+  background-color: #444;
   color: #c3c3c3;
   display: flex;
   flex-direction: column;
@@ -60,6 +60,7 @@ a:hover {
 article {
   font-size: 21px;
   line-height: 1.58;
+  padding: 60px 0;
 }
 
 @media only screen and (max-width: 600px) {
@@ -176,7 +177,7 @@ a.site-logo {
 }
 
 .navigation-item:hover {
-  background-color: #f8f8f8;
+  background-color: #eaeaea;
 }
 
 .section-title {
